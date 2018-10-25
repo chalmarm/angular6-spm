@@ -1,0 +1,36 @@
+<div class="component">
+  <header>
+    <span class="page-title">User Detail</span>
+    <span> | <a routerLink='/users/list'>Back to list</a></span>
+  </header>
+  <table class = "table table-sm" *ngIf="user">
+    <tr>
+      <td>Id:</td>
+      <td>{{ user.Id }}</td>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td>{{ user.FirstName }} {{ user.LastName }}</td>
+    </tr>
+    <tr>
+      <td>User Name:</td>
+      <td>{{ user.UserName }}</td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td>{{ user.Phone }}</td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td>{{ user.Email }}</td>
+    </tr>
+    <tr>
+      <td>Reviewer?:</td>
+      <td>{{ user.IsReviewer | bool }}</td>
+    </tr>
+    <tr>
+      <td>Admin?:</td>
+      <td>{{ user.IsAdmin | bool }}</td>
+    </tr>
+  </table>
+</div>
